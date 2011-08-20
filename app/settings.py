@@ -89,6 +89,8 @@ SECRET_KEY = 'o@!+idzefqru69c)@0_moqq%^g$u@&46n=4&hrnjb!61rhu1cg'
 # Unique ID for API stuff
 UUID = 'lartdartmuspuss'
 
+EASY_MAPS_GOOGLE_KEY = "ABQIAAAA_6YxpRQIVJjIx8daYGWgaRTJhRRgugx9ncuJaIpdmYOxE0y1oxSkgB6ImvQIauh4p8nNzPtQx4RDNw"
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -154,7 +156,7 @@ LOGGING = {
     }
 }
 COMPRESS = not DEBUG
-GAID = "" # Google analytics ID
+GAID = "709399-8" # Google analytics ID without "UA-"
 
 try:
     from local_settings import *

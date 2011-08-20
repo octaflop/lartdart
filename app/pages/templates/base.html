@@ -14,11 +14,16 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/page.css">
 
 	<script src="{{ STATIC_URL }}js/libs/modernizr-2.0.6.min.js"></script>
+	<!-- google maps -->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script> 
+	{% block mapscript %}
+	{% endblock %}
 </head>
 
-<body>
+<body onload="initialize()">
 <div id="container">
 	<header>
 	{% block header %}
