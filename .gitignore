@@ -3,6 +3,8 @@
 /bin/
 /lib/
 /src/
+/share/
 .*.swp
 *.pyc
 local_settings.py
+*.sqlite

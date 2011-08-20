@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'NAME': 'dev.sqlite',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -86,6 +86,8 @@ STATICFILES_FINDERS = (
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'o@!+idzefqru69c)@0_moqq%^g$u@&46n=4&hrnjb!61rhu1cg'
+# Unique ID for API stuff
+UUID = 'lartdartmuspuss'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -124,6 +126,9 @@ INSTALLED_APPS = (
     "pages",
     'compressor',
     "gunicorn",
+
+    # main module
+    'curator',
 )
 
 # A sample logging configuration. The only tangible logging
