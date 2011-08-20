@@ -13,5 +13,6 @@ class Command(BaseCommand):
         location = args[0]
         ##print yellowfinds(location)
         pprint(get_yellow_json(location))
+        crunchit(location)
         #feedfinds(location)
         return

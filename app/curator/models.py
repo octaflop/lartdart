@@ -1,5 +1,6 @@
 from django.db import models
-from curator.urlutils import unique_slugify
+#from curator.urlutils import unique_slugify
+
 from django.template.defaultfilters import slugify
 
 class Location(models.Model):
@@ -35,8 +36,8 @@ class Gallery(models.Model):
 
     def save(self, *args, **kwargs):
         slugstr = self.name
-        ##unique_slugify(self, slugstr)
-        slugify(slugstr)
+        #unique_slugify(self, slugstr)
+        self.slug = slugify(slugstr)
         super(Gallery, self).save(*args, **kwargs)
 
     def __unicode__(self):
@@ -45,6 +46,10 @@ class Gallery(models.Model):
     class Meta:
         verbose_name = "gallery"
         verbose_name_plural = "galleries"
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('gallery_object_view', [str(self.slug)],)
 
 class Event(models.Model):
     """

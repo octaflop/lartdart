@@ -5,7 +5,7 @@
  
       function initialize() {
         var myOptions = {
-          zoom: 6,
+          zoom: 14,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         map = new google.maps.Map(document.getElementById('map_canvas'),
@@ -37,7 +37,7 @@
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">{{ gallery.name }}</h1>'+
         '<div id="bodyContent">'+
-        '<a href="{{ gallery.website }}">'+
+        '<a href="{{ gallery.get_absolute_url }}">'+
         'More info</a> '+
         '<a href="{{ gallery.ypwebsite }}">'+
         'Yellow Pages Link</a> '+
