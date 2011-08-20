@@ -5,10 +5,10 @@ from curator.models import Gallery, Event, Artist
 class GalleryAdmin(admin.ModelAdmin):
     pass
 
-class GalleryAdmin(admin.ModelAdmin):
+class EventAdmin(admin.ModelAdmin):
     pass
 
-class GalleryAdmin(admin.ModelAdmin):
+class ArtistAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Gallery, GalleryAdmin)
