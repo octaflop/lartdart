@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}
+	Galleries
+{% endblock %}
+{% block content %}
+	{% for gallery in object_list %}
+		{{ gallery.name }}
+	{% endfor %}
+{% endblock %}
